@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorDark"
+    tools:context=".api.RegInfoActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/mainLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="44dp"
+                android:fontFamily="@font/baloopaaji2_bold"
+                android:text="Why are you scary?"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/default_avatar"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/mainLabel" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/nameCard"
+                android:layout_width="0dp"
+                android:layout_height="76dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="30dp"
+                android:background="?selectableItemBackground"
+                android:backgroundTint="@color/colorDarkPurple"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/avatar">
+
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start|center"
+                    android:layout_marginHorizontal="24dp"
+                    android:backgroundTint="@color/colorDarkPurple"
+                    android:fontFamily="@font/baloopaaji2_bold"
+                    android:hint="Name"
+                    android:inputType="text"
+                    android:lines="1"
+                    android:maxLines="1"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="18sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/aboutCard"
+                android:layout_width="0dp"
+                android:layout_height="140dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                android:background="?selectableItemBackground"
+                android:backgroundTint="@color/colorDarkPurple"
+                app:cardCornerRadius="16dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/nameCard">
+
+                <EditText
+                    android:id="@+id/about"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginVertical="12dp"
+                    android:backgroundTint="@color/colorDarkPurple"
+                    android:fontFamily="@font/baloopaaji2_bold"
+                    android:gravity="start"
+                    android:hint="About"
+                    android:inputType="text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:textColorHint="@color/colorWhite"
+                    android:textSize="18sp" />
+
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/topicsLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="27dp"
+                android:fontFamily="@font/baloopaaji2_bold"
+                android:text="Party Topics"
+                android:textColor="@color/colorWhite"
+                android:textSize="24sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/aboutCard" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/topicsRv"
+                android:layout_width="0dp"
+                android:layout_marginHorizontal="12dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topicsLabel" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/buttonSave"
+                android:layout_width="0dp"
+                android:layout_height="68dp"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="24dp"
+                android:layout_marginTop="45dp"
+                android:backgroundTint="@color/colorOrange"
+                android:elevation="10dp"
+                android:fontFamily="@font/baloopaaji2_bold"
+                android:shadowColor="@color/colorDarkOrange"
+                android:text="Save"
+                android:textAllCaps="false"
+                android:textColor="@color/colorDark"
+                android:textSize="18sp"
+                app:cornerRadius="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/topicsRv" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
+
