@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDark"
-    tools:context=".SignInActivity">
+    tools:context=".controller.SignInActivity">
 
     <TextView
         android:id="@+id/signUpLabel"
@@ -88,14 +88,14 @@
     <com.google.android.material.button.MaterialButton
         android:id="@+id/buttonSignIn"
         android:layout_width="0dp"
-        android:layout_height="68dp"
+        android:layout_height="80dp"
+        android:background="@drawable/button_with_shadow"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="24dp"
         android:backgroundTint="@color/colorOrange"
         android:elevation="10dp"
         android:fontFamily="@font/baloopaaji2_bold"
-        android:shadowColor="@color/colorDarkOrange"
-        android:text="Sign in"
+        android:text="Sign In"
         android:textAllCaps="false"
         android:textColor="@color/colorDark"
         android:textSize="18sp"

@@ -1,4 +1,4 @@
-package ru.a1exs.srez.api.data
+package ru.a1exs.srez.common.api.data
 
 import com.google.gson.GsonBuilder
 import io.reactivex.Observable
@@ -11,21 +11,20 @@ import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.Header
 import retrofit2.http.POST
-import ru.a1exs.srez.api.models.RegAuthBody
-import ru.a1exs.srez.api.models.RegAuthResp
-import ru.a1exs.srez.api.models.TopicsModel
+import ru.a1exs.srez.common.api.models.RegAuthBody
+import ru.a1exs.srez.common.api.models.RegAuthResp
+import ru.a1exs.srez.common.api.models.TopicsModel
 
 interface Api {
 
     @POST("v1/auth/register")
     fun register(@Body requestAuthBody : RegAuthBody) : Observable<Response<RegAuthResp>>
 
-
     @POST("v1/auth/login")
-    fun auth(@Body requestAuthBody : RegAuthBody, @Header("Bearer") BearerAuth : String = "123") : Observable<Response<RegAuthResp>>
+    fun auth(@Body requestAuthBody: RegAuthBody): Observable<Response<RegAuthResp>>
 
     @GET("v1/topic")
-    fun getTopic(@Header("Bearer") BearerAuth : String = "123") : Observable<Response<List<TopicsModel>>>
+    fun getTopic(@Header("Authorization") token: String): Observable<Response<List<TopicsModel>>>
 
     companion object {
         fun createApi(): Api {
@@ -33,7 +32,7 @@ interface Api {
                 .setLenient()
                 .create()
             val retrofit = Retrofit.Builder()
-                .baseUrl("http://193.38.50.175/scare-me/api/mobile/")
+                .baseUrl("http://45.144.179.101/scare-me/api/mobile/")
                 .addConverterFactory(GsonConverterFactory.create(gson))
                 .addConverterFactory(ScalarsConverterFactory.create())
                 .addCallAdapterFactory(RxJava2CallAdapterFactory.create())

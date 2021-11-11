@@ -1,4 +1,4 @@
-package ru.a1exs.srez.api.models
+package ru.a1exs.srez.common.api.models
 
 data class TopicsModel(
     val id : String,

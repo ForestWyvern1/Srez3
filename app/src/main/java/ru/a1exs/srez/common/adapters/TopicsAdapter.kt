@@ -1,4 +1,4 @@
-package ru.a1exs.srez.adapters
+package ru.a1exs.srez.common.adapters
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import ru.a1exs.srez.R
-import ru.a1exs.srez.api.models.TopicsModel
+import ru.a1exs.srez.common.api.models.TopicsModel
 import ru.a1exs.srez.databinding.TopicsRvBinding
 
 class TopicsAdapter(private val context: Context, private val listTopics : ArrayList<TopicsModel>) : RecyclerView.Adapter<TopicsAdapter.ViewHolder>() {

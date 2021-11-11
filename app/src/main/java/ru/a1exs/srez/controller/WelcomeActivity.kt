@@ -1,4 +1,4 @@
-package ru.a1exs.srez
+package ru.a1exs.srez.controller
 
 import android.content.Intent
 import android.os.Bundle

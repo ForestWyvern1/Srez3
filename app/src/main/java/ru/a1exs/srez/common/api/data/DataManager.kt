@@ -1,4 +1,4 @@
-package ru.a1exs.srez.api.data
+package ru.a1exs.srez.common.api.data
 
 import android.content.Context
 
@@ -10,6 +10,12 @@ class DataManager(private val baseContext: Context) {
 
     fun getRefToken() = shared.getString("refToken", "")
     fun setRefToken(value : String) = shared.edit().putString("refToken", value).apply()
+
+    fun getEmail() = shared.getString("email", "")
+    fun setEmail(value : String) = shared.edit().putString("email", value).apply()
+
+    fun getPassword() = shared.getString("password", "")
+    fun setPassword(value : String) = shared.edit().putString("password", value).apply()
 
     val api = Api.createApi()
 }

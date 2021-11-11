@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorDark"
-    tools:context=".api.RegInfoActivity">
+    tools:context=".controller.RegInfoActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -128,7 +128,9 @@
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/buttonSave"
                 android:layout_width="0dp"
-                android:layout_height="68dp"
+                android:layout_height="80dp"
+                android:background="@drawable/button_with_shadow"
+                app:rippleColor="@color/colorDarkOrange"
                 android:layout_marginHorizontal="16dp"
                 android:layout_marginBottom="24dp"
                 android:layout_marginTop="45dp"

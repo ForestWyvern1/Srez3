@@ -1,16 +1,16 @@
-package ru.a1exs.srez.api
+package ru.a1exs.srez.controller
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.GridLayoutManager
-import ru.a1exs.srez.MainActivity
 import ru.a1exs.srez.R
-import ru.a1exs.srez.adapters.TopicsAdapter
-import ru.a1exs.srez.api.models.TopicsModel
+import ru.a1exs.srez.common.adapters.TopicsAdapter
+import ru.a1exs.srez.common.api.models.TopicsModel
+import ru.a1exs.srez.common.base.BaseActivity
 import ru.a1exs.srez.databinding.ActivityRegInfoBinding
 
-class RegInfoActivity : AppCompatActivity() {
+class RegInfoActivity : BaseActivity() {
     private lateinit var binding: ActivityRegInfoBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
